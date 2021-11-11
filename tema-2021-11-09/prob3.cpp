@@ -9,7 +9,7 @@ using namespace std;
 int main(){
     int x,y,a,b,c,d;
     
-    cout << "Alege un nr. x de 4 cifre: ";
+    cout << "Alege un nr. x de 4 cifre de forma [abcd]: ";
     cin >> x;
     
     a = x / 1000;
@@ -17,6 +17,11 @@ int main(){
     c = (x % 100) / 10;
     d = x % 10;
 
+    cout << "a=" << a << endl;
+    cout << "b=" << b << endl;
+    cout << "c=" << c << endl;
+    cout << "d=" << d << endl;
+    
     y = a*1000 + d*100 + c*10 + b;
 
     cout << "Nr. inversat este " << y << "\n";
