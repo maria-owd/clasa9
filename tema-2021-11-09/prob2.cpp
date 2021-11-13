@@ -6,7 +6,6 @@ using namespace std;
   * Fie un număr x format din exact 3 cifre citit de la tastatură. 
   * Să se depună cifrele numărului în trei variabile corespunzătoare unitaților, zecilor și și sutelor numărului, apoi să se afișeze cifrele astfel obținute. 
  */
-
 int main(){
 
     int x,a,b,c;
@@ -30,9 +29,7 @@ int main(){
     cout << "Cifra unitatilor este " << c << endl;
 
     cout << endl << endl;
-    return 0;
-
-    
+    return 0;    
 }
 
  
