@@ -14,33 +14,35 @@ ex: 7231094
         |+-----> pozitia 1
         +------> pozitia 2
 */
-
 int main(){
     int n,p,s,r,c;
     
     cout << "n=";
     cin >> n;
 
-    p = 1;
-    s = 0;
+    p = 1; // prudusul
+    s = 0; // suma
     r = 0; // rangul
 
     while (n!=0){
         // calculeaza cifra curenta
         c = n % 10;
 
-        // .. 
-        if (r%2==0){
+        // verific rangul par sau impar
+        if (r%2 == 0){
             p = p * c;
         } else {
             s = s + c;
         }
 
-        // pregatesti noul ciclu
+        // tai ultima cifra
         n = n / 10;
+
+        // incrementez rangul
         r++;
     } 
-    cout << p << endl << s << endl;
+
+    cout << "Produsul: " << p << endl << "Suma: " << s << endl;
 
     return 0 ;
 }
