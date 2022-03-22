@@ -4,10 +4,10 @@ using namespace std;
 
 
 /** 
-Se citeste un nr natural n. Sa se afiseze:
-- produsul cifrelor de rang par
-- suma cifrelor de rang impar
-rang = nr. sau de ordine, numerotandu-se de la dreapta la stanga
+Se citește de la tastatură un număr natural nenul n. 
+Să se calculeze și să se afișeze pe ecran raportul dintre produsul cifrelor de rang par 
+și suma cifrelor de rang impar ale lui n 
+( rangul unei cifre este numărul său de ordine, numerotând cifrele de la dreapta la stânga, începând cu zero).
 
 ex: 7231094 
         ||+----> pozitia 0
@@ -42,7 +42,7 @@ int main(){
         r++;
     } 
 
-    cout << "Produsul: " << p << endl << "Suma: " << s << endl;
+    cout << "Raportul este: " << p / s << endl;
 
     return 0 ;
 }
