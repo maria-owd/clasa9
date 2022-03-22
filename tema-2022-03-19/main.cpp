@@ -18,7 +18,12 @@ int main(){
     int n,p,s,r,c;
     
     cout << "n=";
-    cin >> n;
+    cin >> n; 
+
+    if (n==0){
+        cout << "Eroare, numarul trebuie sa fie nenul" << endl;
+        return 1;
+    }
 
     p = 1; // prudusul
     s = 0; // suma
