@@ -10,8 +10,8 @@ int main(){
     //cin >> n;
     n = 43212234; // test
 
-    nInitial = n;
-    cifre = 0;
+    nInitial = n; // tinem minte pt. verificarea finala cu oglinditul
+    cifre = 0;  // numarul de cifre
     cifrePare = 0;
     sumaImpare = 0;
     produs = 1;
@@ -21,11 +21,11 @@ int main(){
     nrMax = 0;
     oglindit = 0;
     
-    while ( n != 0){
+    while (n != 0){
         c = n%10; 
         cifre++;
 
-        if (c%2==0){
+        if (c%2 == 0){
             cifrePare++;
         } else {
             sumaImpare = sumaImpare + c;
@@ -34,22 +34,22 @@ int main(){
         produs = produs * c;
         sumaCifre = sumaCifre + c;
 
-        if (c==6){
+        if (c == 6){
             nr6++;
         }
 
         if (c > cMax){
-            cMax = c;
-            nrMax = 0;
+            cMax = c; // tin minte NOUL maxim
+            nrMax = 0; // numar aparitiile pt NOUL maxim de la zero
         }
 
-        if (c==cMax){
+        if (c == cMax){
             nrMax++;
         }
 
         oglindit = oglindit * 10 + c;
 
-        n = n/10;
+        n = n/10; // ultima instructiune din while -> se calculeaza noul nr
     }
 
     cout << "Numarul de cifre este: " << cifre << endl;  
@@ -62,20 +62,20 @@ int main(){
     }
     cout << "Produsul cifrelor este: " << produs << endl;
 
-    if (cifre!=0){
+    if (cifre != 0){
         cout << "Media cifrelor: " << sumaCifre/cifre << endl;
     } else {
         cout << "nu se poate calcula media" << endl;
     }
 
-    if (nr6==0){
+    if (nr6 == 0){
         cout << "Nicio cifra de 6" << endl;
     } else {
         cout << "numarul cifrelor de 6: " << nr6 << endl;
     }
 
     cout << "Cifra maxima este: " << cMax << endl;
-    cout << "Aparitia cifrei amxime este: " << nrMax << endl;
+    cout << "Aparitia cifrei maxime este: " << nrMax << endl;
     cout << "Oglinditul nr este: " << oglindit << endl;
 
     if (oglindit == nInitial){
