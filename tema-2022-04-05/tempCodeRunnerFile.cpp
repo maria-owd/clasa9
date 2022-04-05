@@ -1,1 +1,1 @@
-){
+numereGasite++;

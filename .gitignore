@@ -5,3 +5,5 @@
 !**/*.c
 .DS_Store
 *.out
+**/tempCodeRunnerFile.cpp
+*tempCodeRunnerFile.cpp
