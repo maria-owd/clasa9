@@ -32,8 +32,8 @@ int main(){
         
         if (aparitiiCaInB == 0){
             cifreCareNuApar++;
-           // cout << "cel putin o cifra nu exista in nr b" << endl;
-            // return 1;
+            cout << "cel putin o cifra nu exista in nr b" << endl;
+            return 1;
         }
         
         a = a/10;
