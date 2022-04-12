@@ -7,40 +7,64 @@ using namespace std;
  */
 
 int main(){
-    int a,b,ca,cb, aparitiiCaInB, copieB, cifreCareNuApar; 
+    int a,b,ca,cb, aparitiiCifra, copieB, copieA, cifreCareNuApar; 
     
     cout << "a=";
     cin >> a;
     cout << "b=";
     cin >> b;
+
     copieB = b;
+    copieA = a;
+
     cifreCareNuApar = 0;
 
     while (a != 0){
         ca = a%10;
-        aparitiiCaInB = 0;
+        aparitiiCifra = 0;
         b = copieB;
 
         while (b != 0){
-           cb = b%10;
+            cb = b%10;
 
-           if(ca == cb){
-               aparitiiCaInB++;
-           }
+            if(ca == cb){
+                aparitiiCifra++;
+            }
             b = b/10;
         }
         
-        if (aparitiiCaInB == 0){
+        if (aparitiiCifra == 0){
             cifreCareNuApar++;
-            // cout << "cel putin o cifra nu exista in nr b" << endl;
-            // return 1;
         }
         
         a = a/10;
     }
-    if (cifreCareNuApar == 0){
-        cout << "toate cifrele apar in nr b" << endl;
-    } else{
+
+    b = copieB;
+    while (b != 0){
+        cb = b%10;
+        aparitiiCifra = 0;
+        a = copieA;
+
+        while (a != 0){
+            ca = a%10;
+
+            if(ca == cb){
+                aparitiiCifra++;
+            }
+            a = a/10;
+        }
+        
+        if (aparitiiCifra == 0){
+            cifreCareNuApar++;
+        }
+        
+        b = b/10;
+    }
+
+    if (cifreCareNuApar == 0) {
+        cout << "numerele sunt formate din aceleasi cifre" << endl;
+    } else {
         cout << "numerele nu sunt formate din aceleasi cifre" << endl;
     }
     
