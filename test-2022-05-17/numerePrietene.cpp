@@ -32,6 +32,6 @@ int main (){
         cout << "dusmani" << endl;
     }
 
-
+    return 0;
 
 }
